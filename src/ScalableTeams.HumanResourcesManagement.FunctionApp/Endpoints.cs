@@ -5,16 +5,16 @@ using Microsoft.Extensions.Logging;
 
 namespace ScalableTeams.HumanResourcesManagement.FunctionApp
 {
-    public class Function1
+    public class Endpoints
     {
-        private readonly ILogger<Function1> _logger;
+        private readonly ILogger<Endpoints> _logger;
 
-        public Function1(ILogger<Function1> logger)
+        public Endpoints(ILogger<Endpoints> logger)
         {
             _logger = logger;
         }
 
-        [Function("Function1")]
+        [Function("Endpoints")]
         public IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequest req)
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
